@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <canvas id="canvas1" width="800" height="600"></canvas>
+    <script src="script/manoel.js"></script>
+    <script src="script/artur.js"></script>
+</head>
+<body>
+    
+</body>
+<script>
+    const canvas = document.getElementById("canvas1");
+    const ctx = canvas.getContext("2d");
+
+    let pontos1 = interacao("1");
+    let pontos2 = interacao("2");
+
+
+    forma(pontos1, "red");
+    forma(pontos2, "blue");
+
+</script>
+</html>
