@@ -6,6 +6,7 @@
         for(let i = 1; i < a.length; i++){
             ctx.lineTo(a[i].x, a[i].y);
         }
+        ctx.lineTo(a[0].x, a[0].y);
         ctx.closePath();
         ctx.stroke();
     }
@@ -26,3 +27,4 @@
     pontos.shift();
     return(pontos);
 }
+function drawPolygon(arr)
