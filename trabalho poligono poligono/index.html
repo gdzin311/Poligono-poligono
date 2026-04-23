@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <canvas id="canvas1" width="800" height="600"></canvas>
+    <script src="script/criar_poligonos.js"></script>
+    <script src="script/calcular.js"></script>
+</head>
+<body>
+    
+</body>
+<script>
+    const canvas = document.getElementById("canvas1");
+    const ctx = canvas.getContext("2d");
+
+    let pontos1 = interacao("1");
+    let pontos2 = interacao("2");
+
+
+    forma(pontos1, "red");
+    forma(pontos2, "blue");
+
+    const inters = intersecoesEntreFormas(pontos1, pontos2);
+
+    console.log("Interseções:");
+    for (let p of inters) {
+        console.log(`x: ${p.x.toFixed(2)}, y: ${p.y.toFixed(2)}`);
+    }
+
+    desenharPontos(inters, "green");
+
+</script>
+</html>
